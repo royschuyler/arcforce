@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Ellipse with Compass Construction</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #controls {
+      margin-bottom: 10px;
+    }
+    label { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label for="aSlider">
+      a (ellipse parameter): <span id="aValue">1.2</span>
+    </label>
+    <input type="range" id="aSlider" min="0.5" max="3.0" step="0.1" value="1.2">
+    
+    <label for="sizeSlider">
+      Graph Scale (pixels/unit): <span id="sizeValue">100</span>
+    </label>
+    <input type="range" id="sizeSlider" min="50" max="300" step="10" value="100">
+
+    <label for="plotsSelect">
+      Plots per Quadrant:
+    </label>
+    <select id="plotsSelect">
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" selected>5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+    
+    <button id="downloadBtn">Download PNG</button>
+  </div>
+  <canvas id="myCanvas" width="600" height="600" style="border:1px solid #ccc;"></canvas>
+  
+  <script src="script.js"></script>
+</body>
+</html>
